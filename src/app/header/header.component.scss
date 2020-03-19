@@ -1,0 +1,9 @@
+.header{
+  &-nav{
+    margin-top: $gutter-size;
+
+    &-link{
+      margin-right: $gutter-size;
+    }
+  }
+}
