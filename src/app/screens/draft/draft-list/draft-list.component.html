@@ -1,0 +1,23 @@
+<div class="block">
+  <h2 class="block-subtitle">Drafts</h2>
+  <table class="orders-list">
+    <thead class="orders-list-header">
+    <tr>
+      <td class="order-detail --number">name</td>
+      <td class="order-detail --address">from</td>
+      <td class="order-detail --address">to</td>
+      <td class="order-detail --price">price</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let draft of drafts$ | async" class="order">
+      <td class="order-detail --number">
+        <a [routerLink]="[draft.id]">{{draft.name}}</a>
+      </td>
+      <td class="order-detail --address">{{draft.from}}</td>
+      <td class="order-detail --address">{{draft.to}}</td>
+      <td class="order-detail --price">{{draft?.price || 'To be computed'}} €</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
