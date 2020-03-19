@@ -1,1 +1,10 @@
-<p>order-detail works!</p>
+<div class="block">
+  <table *ngIf="data.order as order">
+    <tbody>
+      <tr>Number: {{order.number}}</tr>
+      <tr>From: {{order.from}}</tr>
+      <tr>To: {{order.to}}</tr>
+      <tr>Price: {{order.price}}€</tr>
+    </tbody>
+  </table>
+</div>
