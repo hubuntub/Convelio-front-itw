@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Data } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+
+import { Order } from '../../../models/order.model';
 
 @Component({
   selector: 'app-order-detail',
@@ -7,12 +9,12 @@ import { ActivatedRoute, Data } from '@angular/router';
   styleUrls: ['./order-detail.component.scss']
 })
 export class OrderDetailComponent implements OnInit {
-  public data: Data;
+  public order: Order;
 
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.data = this.route.snapshot.data;
+    this.order = this.route.snapshot.data.order as Order;
   }
 
 }

@@ -1,10 +1,10 @@
 <div class="block">
-  <table *ngIf="data.order as order">
+  <table *ngIf="order">
     <tbody>
-      <tr>Number: {{order.number}}</tr>
-      <tr>From: {{order.from}}</tr>
-      <tr>To: {{order.to}}</tr>
-      <tr>Price: {{order.price}}€</tr>
+    <tr>Number: {{order.number}}</tr>
+    <tr>From: {{order.from}}</tr>
+    <tr>To: {{order.to}}</tr>
+    <tr>Price: {{order.price}}€</tr>
     </tbody>
   </table>
 </div>

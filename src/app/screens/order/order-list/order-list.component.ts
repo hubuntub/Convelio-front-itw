@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
+import { Order } from '../../../models/order.model';
 import { OrderService } from '../../../services/order.service';
 
 @Component({
@@ -10,7 +11,7 @@ import { OrderService } from '../../../services/order.service';
 })
 export class OrderListComponent implements OnInit {
 
-  orders: Observable<any[]>;
+  orders: Observable<Order[]>;
 
   constructor(
     private orderService: OrderService
