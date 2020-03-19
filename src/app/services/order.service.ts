@@ -13,7 +13,7 @@ export class OrderService {
     private apiService: ApiService
   ) {}
 
-  private getOrders(): Observable<any> {
+  public getOrders(): Observable<any> {
     return this.apiService.get().pipe(
       map(res => res.orders)
     );
